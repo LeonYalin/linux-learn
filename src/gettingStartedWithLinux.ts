@@ -1,6 +1,6 @@
 import { delimeterMsg, logF, logToHTML } from "./utils";
 
-function runningUbuntu() {
+function installingUbuntu() {
   logToHTML('' +
     'Start by installing Linux on USB using the ubuntu ISO image and Rufus. Hold the right SHIFT key on startup to enter the linux BIOS(or UEFI). ' +
     'To run the terminal, press CTRL+SHIFT+T' +
@@ -25,9 +25,31 @@ function filesystemHierarchy() {
     `);
 }
 
+
+function managingSystemEnvironment() {
+  logToHTML('' +
+    `We can manage the system environment using the following commands:
+      "localectl" - manage system locale
+      "timedatectl" - manage system time and date
+      "echo <text or $VAR>" - print text or variable contents
+      "pwd" - print current directory. Also $PWD
+      "env" - list of all environment variables
+      "|" - using pipes to redirect the output to different command, e.g. "env | less", "env | grep PWD"
+      "myval=5" - create a local variable for current shell
+      "export myval=5" - export a variable for all shells
+      "bash" - enter bash terminal, then "exit" to exit from bash
+    We can manage the system hardware using the following commands:
+      "df" or "df -ht ext4" - list all connected drives, e.g. for "sda1" and "sdb5" - a and b is the disk number and 1 and 5 is the partition number 
+      "lsblk" - list all system devices, event the not-connected ones, e.g. "lsblk | grep sda"
+      "dmesg" - info about system adapter usage, e.g. "dmesg | grep wl" - view wireless devices activity
+      "lshw" - view system hardware
+    `);
+}
+
+
 function installingDevSoftware() {
   logToHTML('' +
-    `In order to install dev software, we need to learn some commands and tools we have in linux:
+    `In order to install dev slinuxSystemEnvironmentoftware, we need to learn some commands and tools we have in linux:
       "ssh-keygen" - generate ssh public and privete keys 
       ".deb" - debian packages files. Ubuntu is built on top of Debian Linux and can use these files and "apt" package manager. 
       ".tar" - tar format is like a zip tool for Linux. It makes a single file from multiple and can compress files as well. 
@@ -50,7 +72,8 @@ function installingDevSoftware() {
 
 export default function installingLinux() {
   delimeterMsg('INSTALLING LINUX');
-  logF(runningUbuntu);
+  logF(installingUbuntu);
   logF(filesystemHierarchy);
+  logF(managingSystemEnvironment);
   logF(installingDevSoftware);
 }
