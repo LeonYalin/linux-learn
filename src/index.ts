@@ -1,5 +1,7 @@
-import installingLinux from "./gettingStartedWithLinux";
+import gettingStartedWithLinux from "./gettingStartedWithLinux";
+import gettingStartedWithLinuxCommandLine from "./gettingStartedWithLinuxCommandLine";
 
 (function main() {
-  installingLinux();
+  gettingStartedWithLinux();
+  gettingStartedWithLinuxCommandLine();
 }());
