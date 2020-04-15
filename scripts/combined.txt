@@ -1,0 +1,532 @@
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+for filename in calc.sh loops.sh
+  do
+    cat $filename > combined.txt
+    echo "adding from $filename" >> combined.txt
+  done
+cat combined.txt
+
+adding from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+cat combined.txt
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if [2 != 1]; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if [2 -ne 1]; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if [2 -gt 1]; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if test 2 -gt 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if test 2 -eq 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+declare -i counter
+counter=10
+while [ $counter -gt 2 ]; do
+    echo "counter is $counter"
+    counter=counter-2
+
+exit 0
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+declare -i counter
+counter=10
+while [ $counter -gt 2 ]; do
+    echo "counter is $counter"
+    counter=counter-2
+done
+
+exit 0
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+
+### For loop with i ###
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+### For loop with files  ###
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+### If Else ###
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+### While loop  ###
+declare -i counter
+counter=10
+while [ $counter -gt 2 ]; do
+    echo "counter is $counter"
+    counter=counter-2
+done
+
+### Switch Case ###
+case [2 -gt 1] in
+    true echo "2 is greater than 1";;
+    false echo "2 is not greated han 1";;
+    * echo "unknown equation";;
+esac
+
+exit 0
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+
+### For loop with i ###
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+### For loop with files  ###
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+### If Else ###
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+### While loop  ###
+declare -i counter
+counter=10
+while [ $counter -gt 2 ]; do
+    echo "counter is $counter"
+    counter=counter-2
+done
+
+### Switch Case ###
+city="Kishinev"
+case $pi in
+    Kishinev) echo "city is Kishinev";;
+    Moscow) echo "city is Moscow";;
+    *) echo "city is unknown";;
+esac
+
+exit 0
+
+
+appended from loops.sh
+#!/bin/bash
+declare -i first # -i for integer
+declare -i second
+declare -i result
+
+echo "Enter first num:"
+read first
+
+echo "enter second num"
+read second
+
+result=$first*$second
+echo "Result is: " $result
+exit 0
+appended from calc.sh
+#!/bin/bash
+
+### For loop with i ###
+for i in {1..10..2}
+  do
+    echo "printing count in iterarions of 2... current is $i"
+  done
+
+### For loop with files  ###
+touch combined.txt
+for filename in calc.sh loops.sh
+  do
+    cat $filename >> combined.txt
+    echo "appended from $filename" >> combined.txt
+  done
+
+### If Else ###
+if test 2 -ne 1; then
+    echo "2 not equals 1"
+else
+    echo "2 equals 1"
+fi
+
+### While loop  ###
+declare -i counter
+counter=10
+while [ $counter -gt 2 ]; do
+    echo "counter is $counter"
+    counter=counter-2
+done
+
+### Switch Case ###
+city="Kishinev"
+case $city in
+    Kishinev) echo "city is Kishinev";;
+    Moscow) echo "city is Moscow";;
+    *) echo "city is unknown";;
+esac
+
+exit 0
+
+
+appended from loops.sh

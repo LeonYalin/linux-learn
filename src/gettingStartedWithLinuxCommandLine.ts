@@ -40,8 +40,8 @@ function commandLineBasics() {
         "| grep <criteria>" - pipe the output to specific line containing <criteria>
         "| wc" - words count
         "| sort" - sort output, -n for ascending order, -rn for descending order
-        ">> file" - redirect the ouput to the new file
-        "> file" - append to the end of existing file, or create a file
+        "> file" - redirect the ouput to the new file
+        ">> file" - append to the end of existing file, or create a file
         Example: "locate package.json | grep linux-learn | wc > wc.txt" - count all package.json files inside linux-learn directory and store the result in wc.txt file
         "head <file>" - print first 10 lines of the file
         "tail <file>" - print last 10 lines of the file, "tail -f" us a useful options

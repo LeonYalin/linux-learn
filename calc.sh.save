@@ -1,0 +1,6 @@
+#!/bin/bash
+declare -i first #-i for integer
+declare -i second
+declare -i total
+read "asdenter the first number:" first
+read "enter the second number:" second

@@ -70,10 +70,46 @@ function installingDevSoftware() {
     `);
 }
 
+function networkConnectivity() {
+  logToHTML('' +
+    `In order to manage network operations in Linux we can use the following commands:
+      "ip route" - to see the router connections and your own ip address (in the end of the line)
+      "ip addr" or "ifconfig" - to view the mashine available ip addresses
+      "netstat" - to view all network connections, "netstat -l" - display all open and listening ports
+      "host <web_addr>" - to view the ipV name of the website, e.g. "host pluralsight.com"
+      "ping <web_addr>" - to check if the web_rrd exists and live
+    - We can edit a "/etc/hosts" file to view and manage dns servers that are translated to names.
+    - The open-ssh protocol is used to securely connect to the remove hosts. In order to make it work, we need to install
+    "openssh-server" on the receiving mashine, and "openssh-client" on client mashine. Ssh client configuration is
+    located in "/etc/ssh/ssh_config" file, and "/etc/ssh/sshd_config" is for server configuration.
+    "ssh user@remote_addr" will open the shh session, "exit" to end it. Use flags like "-p" for port, "-i" for sertificate ect..
+    "scp <file_loc> user@remote_addr:<remote_file_loc>" - copy a file to remote server using ssh 
+    `);
+}
+
+function linuxScripting() {
+  logToHTML('' +
+    `We can write bash script using the following commands:
+      "#!/bin/bash" - tell the OS that this an executable bash script
+    - Open the "calc.sh" file to see the details
+      "chmod +x calc.sh" - make the script executable (so no need for "sh calc.sh", just "./calc.sh")
+      "netstat" - to view all network connections, "netstat -l" - display all open and listening ports
+      "host <web_addr>" - to view the ipV name of the website, e.g. "host pluralsight.com"
+      "ping <web_addr>" - to check if the web_rrd exists and live
+    - We can edit a "/etc/hosts" file to view and manage dns servers that are translated to names.
+    - The open-ssh protocol is used to securely connect to the remove hosts. In order to make it work, we need to install
+    "openssh-server" on the receiving mashine, and "openssh-client" on client mashine. Ssh client configuration is
+    located in "/etc/ssh/ssh_config" file, and "/etc/ssh/sshd_config" is for server configuration.
+    "ssh user@remote_addr" will open the shh session, "exit" to end it. Use flags like "-p" for port, "-i" for sertificate ect..
+    "scp <file_loc> user@remote_addr:<remote_file_loc>" - copy a file to remote server using ssh 
+    `);
+}
 export default function installingLinux() {
   delimeterMsg('INSTALLING LINUX');
   logF(installingUbuntu);
   logF(filesystemHierarchy);
   logF(managingSystemEnvironment);
   logF(installingDevSoftware);
+  logF(networkConnectivity);
+  logF(linuxScripting);
 }
