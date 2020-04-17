@@ -53,7 +53,39 @@ function administrationBasics() {
         "sudo groupadd <group_name>" - create a group and name it <group_name>
         "sudo chown :<group_name> <dir>" - change owner of the directory to be <group_name>
         "sudo usermod -a -G <group_name> <user_name>" - add a user <user_name> to the group <group_name>
-        "sudo chmod g+w <group_owned_dir>" - change permiissions for <dir> to be writeable for the owner group   
+        "sudo chmod g+w <group_owned_dir>" - change permiissions for <dir> to be writeable for the owner group
+        "su <user_name>" - switch user
+      
+        "ls -l" - display permissions for files in a directory
+      - Example output: "-rw-rw-r-- 1 liza liza time __.txt". The permissiona are divider into 4 groups:
+      - (- or d for a directory), owner (rw- or rwx) - read/ write / execute for the owner,
+      - owner group (rw-), and all other non-root users (r--). Next, owner is "liza", owner group "liza"
+        "ls -dl" - display permissions for a directory itself
+      - Example output: "drwxrwxr-x 2 ubuntu family time". Here, we have full rights for owners,
+      - read/execute for others. The owner is ubuntu because he created it, owner group is "family"
+        "chmod o+x <file_name>" - change permissions for others, make executable
+      - the "-t" attribute in the end can indicate that members of the group can delete only thir own files.
+      - "sudo chmod +t" will add this capability 
+
+      Numeric notations for permissions:
+        "Read" - 4
+        "Write" - 2
+        "Execute" - 1
+      Total of 7 is full permissions. So persissions can be written as numbers too, e.g. "777"  - for user/group/others
+      "chmod 777 <file_name>" - give full persissions to <file_name> to everyone
+
+      Linking. There are 2 types of links: hard and soft. Hard link is an additional name for a file, soft link is a shorcut.
+        "ln -s <src_file_or_dir> <dest_file_or_dir>" - create a symlink betwen two locations, "-s" for symlink
+      - If we omit the second param, we will create a symlink in current diectory with the same name
+      `);
+  }
+
+  function securingTheLinuxServer() {
+    logToHTML('' +
+      `We should always check and apply security updates to our system, via "sudo apt update", "sudo apt upgrade".
+        "nmap -v -sT <localhost/remote_addr>" - check which local/remote ports are open, and htewn you can type
+        "systemctl disable <running_service>" to disable that service. 
+      - Use let's encrypt to get free CA certificates to use the TLS (and upgrade to SSL) protocol
       `);
   }
 
@@ -61,4 +93,5 @@ export default function gettingStartedWithLinuxSystemAdministration() {
     delimeterMsg('GETTING STARTED WITH LINUX SYSTEM ADMINISTRATION');
     logF(administrationBasics);
     logF(workingWithUsersAndGroups);
+    logF(securingTheLinuxServer);
   }
